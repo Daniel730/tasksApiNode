@@ -11,7 +11,7 @@ module.exports = app => {
         .all(app.config.passport.authenticate())
         .delete(app.api.task.remove)
 
-    app.route("/taskToggle/:id/toggle")
+    app.route("/tasks/:id/toggle")
         .all(app.config.passport.authenticate())
         .put(app.api.task.toggleTask)
 

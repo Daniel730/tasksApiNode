@@ -21,7 +21,7 @@ module.exports = app => {
 
         app.db("tasks")
             .insert(req.body)
-            .then(_ => res.status(400).json(err))
+            .then(_ => res.status(204).send())
     }
 
     const remove = (req, res) => {
